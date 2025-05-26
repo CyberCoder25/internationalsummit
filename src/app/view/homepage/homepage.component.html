@@ -1,0 +1,2410 @@
+<main>
+  <section id="arrowUp" class="background">
+    <aside class="form">
+      <h2>{{ "BORJOMI_GEORGIA" | translate }}</h2>
+      <h3>
+        {{ "National_Parks" | translate }}
+      </h3>
+      <h3>{{ "NOVEMBER" | translate }}</h3>
+    </aside>
+  </section>
+  <section class="scroll">
+    <button
+      *ngIf="showScrollButton"
+      (click)="scrollToTop()"
+      class="btn btn-primary"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </section>
+  <section id="aboutSummit" class="content">
+    <article class="control">
+      <aside class="text">
+        <h3>{{ "summit_title" | translate }}</h3>
+        <p class="line-breaks">{{ "about_summit" | translate }}</p>
+        <iframe
+          width="100%"
+          height="314"
+          style="border: none; overflow: hidden"
+          scrolling="no"
+          src="https://www.youtube.com/embed/l3akP5XMRTA?si=6Vz2_SVue7d_AB8A"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </aside>
+      <!-- <aside class="image">
+        <div class="summitPhoto"></div>
+      </aside> -->
+    </article>
+  </section>
+  <section id="session" class="carouselText">
+    <div
+      id="carouselExampleControlsNoTouching"
+      class="carousel slide"
+      data-bs-touch="false"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3>{{ "welcome" | translate }}</h3>
+          <p class="line-breaks">{{ "welcome_speech" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_first" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_first" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_second" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_second" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_third" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_third" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_four" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_four" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_five" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_five" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_six" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_six" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_seven" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_seven" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_eight" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_eight" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_nine" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_nine" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_ten" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_ten" | translate }}</p>
+        </div>
+        <div class="carousel-item">
+          <h3>{{ "session_head_eleven" | translate }}</h3>
+          <p class="line-breaks">{{ "session_content_eleven" | translate }}</p>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControlsNoTouching"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <section class="download">
+      <a target="_blank" class="btn" [href]="getAgendaLink()">{{
+        "agenda" | translate
+      }}</a>
+    </section>
+  </section>
+  <section id="speakers" class="speakers">
+    <div>
+      <h1 style="font-family: var(--general-font-family)">
+        {{ "Speakers" | translate }}
+      </h1>
+    </div>
+    <article class="my-container">
+      <div class="card">
+        <div (click)="openPopup('JeffMorgan')" class="speakerFirst"></div>
+        <div class="card-body">
+          <div class="div">
+            <h5 (click)="openPopup('JeffMorgan')" class="card-title">
+              {{ "JeffMorgan" | translate }}
+            </h5>
+            <p (click)="openPopup('JeffMorgan')" class="card-text line-breaks">
+              {{ "JeffMorgan_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('JeffMorgan')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isJeffMorganPopupOpen">
+            <div class="speakerFirst"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "JeffMorgan_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "JeffMorgan_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('JeffMorgan')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('JimBarborak')" class="speakerTwo"></div>
+        <div class="card-body">
+          <div class="div">
+            <h5 (click)="openPopup('JimBarborak')" class="card-title">
+              {{ "JimBarborak" | translate }}
+            </h5>
+            <p (click)="openPopup('JimBarborak')" class="card-text line-breaks">
+              {{ "JimBarborak_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('JimBarborak')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isJimBarborakPopupOpen">
+            <div class="speakerTwo"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "JimBarborak_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "JimBarborak_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('JimBarborak')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('MichaelFinley')" class="speakerThree"></div>
+        <div class="card-body">
+          <div class="div">
+            <h5 class="card-title" (click)="openPopup('MichaelFinley')">
+              {{ "MichaelFinley" | translate }}
+            </h5>
+            <p
+              (click)="openPopup('MichaelFinley')"
+              class="card-text line-breaks"
+            >
+              {{ "MichaelFinley_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('MichaelFinley')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isMichaelFinleyPopupOpen">
+            <div class="speakerThree"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "MichaelFinley_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "MichaelFinley_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('MichaelFinley')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('MichaelSutton')" class="speakerFour"></div>
+        <div class="card-body">
+          <div class="div">
+            <h5 (click)="openPopup('MichaelSutton')" class="card-title">
+              {{ "MichaelSutton" | translate }}
+            </h5>
+            <p
+              (click)="openPopup('MichaelSutton')"
+              class="card-text line-breaks"
+            >
+              {{ "MichaelSutton_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('MichaelSutton')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isMichaelSuttonPopupOpen">
+            <div class="speakerFour"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "MichaelSutton_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "MichaelSutton_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('MichaelSutton')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('ElizabethMessud')" class="speakerFive"></div>
+        <div class="card-body">
+          <div (click)="openPopup('ElizabethMessud')" class="div">
+            <h5 class="card-title">{{ "ElizabethMessud" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "ElizabethMessud_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('ElizabethMessud')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isElizabethMessudPopupOpen">
+            <div class="speakerFive"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "ElizabethMessud_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "ElizabethMessud_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('ElizabethMessud')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('ErikIlles')" class="speakerSix"></div>
+        <div class="card-body">
+          <div (click)="openPopup('ErikIlles')" class="div">
+            <h5 class="card-title">{{ "ErikIlles" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "ErikIlles_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('ErikIlles')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isErikIllesPopupOpen">
+            <div class="speakerSix"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "ErikIlles_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "ErikIlles_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('ErikIlles')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('ErinHicks')" class="speakerSeven"></div>
+        <div class="card-body">
+          <div (click)="openPopup('ErinHicks')" class="div">
+            <h5 class="card-title">{{ "ErinHicks" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "ErinHicks_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('ErinHicks')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isErinHicksPopupOpen">
+            <div class="speakerSeven"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "ErinHicks_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "ErinHicks_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('ErinHicks')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('DavitKobakhidze')" class="speakerEight"></div>
+        <div class="card-body">
+          <div (click)="openPopup('DavitKobakhidze')" class="div">
+            <h5 class="card-title">{{ "DavitKobakhidze" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "DavitKobakhidze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('DavitKobakhidze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isDavitKobakhidzePopupOpen">
+            <div class="speakerEight"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "DavitKobakhidze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "DavitKobakhidze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('DavitKobakhidze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('NinoAntadze')" class="speakerNine"></div>
+        <div class="card-body">
+          <div (click)="openPopup('NinoAntadze')" class="div">
+            <h5 class="card-title">{{ "NinoAntadze" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "NinoAntadze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('NinoAntadze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isNinoAntadzePopupOpen">
+            <div class="speakerNine"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "NinoAntadze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "NinoAntadze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('NinoAntadze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('AnzorGogotidze')" class="speakerTen"></div>
+        <div class="card-body">
+          <div (click)="openPopup('AnzorGogotidze')" class="div">
+            <h5 class="card-title">{{ "AnzorGogotidze" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "AnzorGogotidze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('AnzorGogotidze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isAnzorGogotidzePopupOpen">
+            <div class="speakerTen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "AnzorGogotidze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "AnzorGogotidze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('AnzorGogotidze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('KarloAmirgulashvili')"
+          class="speakerEleven"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('KarloAmirgulashvili')" class="div">
+            <h5 class="card-title">{{ "KarloAmirgulashvili" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "KarloAmirgulashvili_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('KarloAmirgulashvili')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isKarloAmirgulashviliPopupOpen">
+            <div class="speakerEleven"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "KarloAmirgulashvili_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "KarloAmirgulashvili_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('KarloAmirgulashvili')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('MakaBitsadze')" class="speakerTwelve"></div>
+        <div class="card-body">
+          <div (click)="openPopup('MakaBitsadze')" class="div">
+            <h5 class="card-title">{{ "MakaBitsadze" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "MakaBitsadze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('MakaBitsadze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isMakaBitsadzePopupOpen">
+            <div class="speakerTwelve"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "MakaBitsadze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "MakaBitsadze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('MakaBitsadze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('VanoVashakmadze')"
+          class="speakerTherteen"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('VanoVashakmadze')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "VanoVashakmadze" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "VanoVashakmadze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('VanoVashakmadze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isVanoVashakmadzePopupOpen">
+            <div class="speakerTherteen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "VanoVashakmadze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "VanoVashakmadze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('VanoVashakmadze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('PaataShanshiashvili')"
+          class="speakerFourteen"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('PaataShanshiashvili')" class="div">
+            <h5 class="card-title">{{ "PaataShanshiashvili" | translate }}</h5>
+            <p class="card-text line-breaks">
+              {{ "PaataShanshiashvili_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('PaataShanshiashvili')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isPaataShanshiashviliPopupOpen">
+            <div class="speakerFourteen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "PaataShanshiashvili_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "PaataShanshiashvili_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('PaataShanshiashvili')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('OlenaSlobodian')" class="speakerSixteen"></div>
+        <div class="card-body">
+          <div (click)="openPopup('OlenaSlobodian')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "OlenaSlobodian" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "OlenaSlobodian_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('OlenaSlobodian')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isOlenaSlobodianPopupOpen">
+            <div class="speakerSixteen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "OlenaSlobodian_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "OlenaSlobodian_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('OlenaSlobodian')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('MustafaGonan')" class="speakerSeventeen"></div>
+        <div class="card-body">
+          <div (click)="openPopup('MustafaGonan')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "MustafaGonan" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "MustafaGonan_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('MustafaGonan')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isMustafaGonanPopupOpen">
+            <div class="speakerSeventeen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "MustafaGonan_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "MustafaGonan_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('MustafaGonan')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('DuncanGrossart')"
+          id="speakerFirst"
+          class="speakerEighteen"
+        ></div>
+        <div class="card-body">
+          <div class="div">
+            <h5 (click)="openPopup('DuncanGrossart')" class="card-title">
+              {{ "DuncanGrossart" | translate }}
+            </h5>
+            <p
+              (click)="openPopup('DuncanGrossart')"
+              class="card-text line-breaks"
+            >
+              {{ "DuncanGrossart_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('DuncanGrossart')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isDuncanGrossartPopupOpen">
+            <div class="speakerEighteen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "DuncanGrossart_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "DuncanGrossart_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('DuncanGrossart')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('ZurabGurgenidze')"
+          class="speakerNineteen"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('ZurabGurgenidze')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "ZurabGurgenidze" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "ZurabGurgenidze_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('ZurabGurgenidze')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isZurabGurgenidzePopupOpen">
+            <div class="speakerNineteen"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "ZurabGurgenidze_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "ZurabGurgenidze_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('ZurabGurgenidze')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('TobyAykroyd')" class="speakerTwenty"></div>
+        <div class="card-body">
+          <div (click)="openPopup('TobyAykroyd')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "TobyAykroyd" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "TobyAykroyd_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('TobyAykroyd')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isTobyAykroydPopupOpen">
+            <div class="speakerTwenty"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "TobyAykroyd_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "TobyAykroyd_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('TobyAykroyd')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('JessicaGraham')"
+          class="speakerTwentyOne"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('JessicaGraham')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "JessicaGraham" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "JessicaGraham_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('JessicaGraham')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isJessicaGrahamPopupOpen">
+            <div class="speakerTwentyOne"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "JessicaGraham_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "JessicaGraham_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('JessicaGraham')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('OleksandrKuseliuk')"
+          class="speakerTwentyTwo"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('OleksandrKuseliuk')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "OleksandrKuseliuk" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "OleksandrKuseliuk_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('OleksandrKuseliuk')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isOleksandrKuseliukPopupOpen">
+            <div class="speakerTwentyTwo"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "OleksandrKuseliuk_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "OleksandrKuseliuk_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('OleksandrKuseliuk')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('StavrevskaPanajotova')"
+          class="speakerTwentyThree"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('StavrevskaPanajotova')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "StavrevskaPanajotova" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "StavrevskaPanajotova_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('StavrevskaPanajotova')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isStavrevskaPanajotovaPopupOpen">
+            <div class="speakerTwentyThree"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "StavrevskaPanajotova_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "StavrevskaPanajotova_content" | translate }}
+              </p>
+              <button
+                class="close"
+                (click)="closePopup('StavrevskaPanajotova')"
+              >
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('AnastasiaDrapaliuk')"
+          class="speakerTwentyFour"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('AnastasiaDrapaliuk')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "AnastasiaDrapaliuk" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "AnastasiaDrapaliuk_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('AnastasiaDrapaliuk')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isAnastasiaDrapaliukPopupOpen">
+            <div class="speakerTwentyFour"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "AnastasiaDrapaliuk_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "AnastasiaDrapaliuk_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('AnastasiaDrapaliuk')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('FedirHamor')" class="speakerTwentyFive"></div>
+        <div class="card-body">
+          <div (click)="openPopup('FedirHamor')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "FedirHamor" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "FedirHamor_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('FedirHamor')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isFedirHamorPopupOpen">
+            <div class="speakerTwentyFive"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "FedirHamor_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "FedirHamor_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('FedirHamor')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('FirthGriffith')"
+          class="speakerTwentySix"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('FirthGriffith')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "FirthGriffith" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "FirthGriffith_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('FirthGriffith')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isFirthGriffithPopupOpen">
+            <div class="speakerTwentySix"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "FirthGriffith_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "FirthGriffith_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('FirthGriffith')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('PaulStephens')"
+          class="speakerTwentySeven"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('PaulStephens')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "PaulStephens" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "PaulStephens_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('PaulStephens')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isPaulStephensPopupOpen">
+            <div class="speakerTwentySeven"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "PaulStephens_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "PaulStephens_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('PaulStephens')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('NatoSultanishvili')"
+          class="speakerTwentyEight"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('NatoSultanishvili')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "NatoSultanishvili" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "NatoSultanishvili_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('NatoSultanishvili')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isNatoSultanishviliPopupOpen">
+            <div class="speakerTwentyEight"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "NatoSultanishvili_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "NatoSultanishvili_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('NatoSultanishvili')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div
+          (click)="openPopup('TamarKhakhiashvili')"
+          class="speakerTwentyNine"
+        ></div>
+        <div class="card-body">
+          <div (click)="openPopup('TamarKhakhiashvili')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "TamarKhakhiashvili" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "TamarKhakhiashvili_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('TamarKhakhiashvili')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isTamarKhakhiashviliPopupOpen">
+            <div class="speakerTwentyNine"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "TamarKhakhiashvili_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "TamarKhakhiashvili_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('TamarKhakhiashvili')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div (click)="openPopup('JensWunderlich')" class="speakerThirty"></div>
+        <div class="card-body">
+          <div (click)="openPopup('JensWunderlich')" class="div">
+            <h5 class="card-title line-breaks">
+              {{ "JensWunderlich" | translate }}
+            </h5>
+            <p class="card-text line-breaks">
+              {{ "JensWunderlich_head" | translate }}
+            </p>
+          </div>
+          <button (click)="openPopup('JensWunderlich')">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <div class="popup-container" *ngIf="isJensWunderlichPopupOpen">
+            <div class="speakerThirty"></div>
+            <div class="popup-content">
+              <h5 class="line-breaks">
+                {{ "JensWunderlich_extraVanila" | translate }}
+              </h5>
+              <p class="line-breaks">
+                {{ "JensWunderlich_content" | translate }}
+              </p>
+              <button class="close" (click)="closePopup('JensWunderlich')">
+                <i style="color: black" class="fa-solid fa-x"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- <hr />
+  <section class="presentation">
+    <div>
+      <h3>{{ "presentation" | translate }}</h3>
+    </div>
+    <aside class="preAside">
+      <button class="btn" (click)="dropDown()">
+        November 7, Day I <i class="fa-solid fa-chevron-down"></i>
+        <ul *ngIf="isOpenFirst">
+          <li>
+            1 Keynote speakers
+            <ul>
+              <li>1. Mr. Jeff Morgan</li>
+              <li>2. Mr. Michael Sutton</li>
+            </ul>
+          </li>
+          <li>
+            COUNTRY PRESENTATIONS
+            <ul>
+              <li>N1 GEORGIA - RACHA NATIONAL PARK</li>
+
+              <li>N2 UKRAINE - CARPATHIANS NATIONAL PARK</li>
+              <li>N3 MACEDONIA - SHAR MOUNTAINS</li>
+            </ul>
+          </li>
+          <li>
+            SESSION I - PARTNERSHIP AND INTERNATIONAL ASSISTANCE FOR PARKS
+            DEVELOPMENT
+            <ul>
+              <li>Mr. Paata Shanshiashvili - USAID</li>
+              <li>Ms. Elizabeth Messud - CNF</li>
+              <li>Ms. Nino Antadze - UNDP</li>
+            </ul>
+          </li>
+          <li>
+            SESSION II - BIODIVERSITY CONSERVATION - ACTIONS AND RESULTS
+            <ul>
+              <li>Mr. Davit Gurgenidze - SABUKO</li>
+              <li>Mr. Davit Kobakhidze - APA</li>
+              <li>Mr. Karlo Amirgulashvili - MEPA</li>
+            </ul>
+          </li>
+          <li>
+            SESSION III - STRENGTHENING THE FINANCIAL SUSTAINABILITY AND
+            CREATING THE
+            <ul>
+              <li>Mr. Toby Aykroyd - Wild Europe Foundation</li>
+              <li>Ms. Jessica Graham - Global Advisory</li>
+              <li>Ms. Maka Bitsadze - WWF</li>
+            </ul>
+          </li>
+          <li>
+            SESSION IV - LEADERSHIP - FROM VISION TO ACTION
+            <ul>
+              <li>Mr. Firth Griffith</li>
+              <li>Mr. Jeff Morgan</li>
+              <li>Mr. Jim Barborak</li>
+              <li>Mr. Michael Sutton</li>
+            </ul>
+          </li>
+        </ul>
+      </button>
+      <button class="btn" (click)="dropDownSecond()">
+        November 8, Day II <i class="fa-solid fa-chevron-down"></i>
+        <ul *ngIf="isOpenSecond">
+          <li>COUNTRY PRESENTATIONS</li>
+          <li>Mr. Jens Wounderlich - Succow Foundation</li>
+          <li>Mr. Jim Barborak</li>
+          <li>Mr. Michael Finley</li>
+          Mr. Michael Sutton
+          <li></li>
+          Mr. Sean Willmore, Green thin line foundation
+          <li></li>
+          SESSION V - LEARNING FROM OTHERS – SHARED CHALLENGES
+          <li></li>
+          SESSION VI - WORLD CAFÉ BREAKOUT I - CHALLENGES, SOLUTIONS AND BEST
+          PRACTICES
+          <li></li>
+          SESSION VII - WORLD CAFÉ BREAKOUT II - IDENTIFY SOLUTIONS AND BEST
+          PRACTICES
+          <li></li>
+        </ul>
+      </button>
+      <button class="btn" (click)="dropDownThird()">
+        November 9, Day III <i class="fa-solid fa-chevron-down"></i>
+        <ul *ngIf="isOpenThird">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </button>
+    </aside>
+  </section> -->
+  <hr />
+  <section id="gallery" class="gallery">
+    <div>
+      <h1 style="font-family: var(--general-font-family)">
+        {{ "gallery" | translate }}
+      </h1>
+    </div>
+    <aside class="mainContainer">
+      <aside class="dayOne">
+        <aside class="FirstContaier" (click)="openPopup('openSlider')">
+          <div class="dayOneImage">
+            <div class="imga">
+              <p>7.11 - {{ "7:11" | translate }}</p>
+            </div>
+          </div>
+        </aside>
+        <aside class="popup-container" *ngIf="isOpenSliderPopupOpen">
+          <button class="closeSlider" (click)="closePopup('openSlider')">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide popup-content"
+            data-bs-ride="carousel"
+          >
+            <!-- <div class="carousel-indicators">
+              <button
+                style="
+                  height: 1.5rem;
+                  width: 3rem;
+                  border-radius: 50%;
+                  background-color: black;
+                "
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+            </div> -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="imageCarousel one"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel two"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel three"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel four"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel five"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel six"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel nine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ten"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eleven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twelve"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fourteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiveteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventeen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eighteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twenty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel twentynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel thirtynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel forty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fortynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fifty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel fiftynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel sixtynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventy"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel seventynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eighty"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel eightynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninety"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetyone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetytwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetythree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetyfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetyfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetysix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetyseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetyeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel ninetynine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundred"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredone"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredtwo"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredthree"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredfour"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredfive"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredsix"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredseven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredeight"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundrednine"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredten"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredeleven"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredtwelve"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredthirteen"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel hundredfourteen"></div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+      </aside>
+      <aside class="dayTwo">
+        <aside class="FirstContaier" (click)="openPopup('openSliderSecond')">
+          <div class="dayTwoImage">
+            <div class="imga">
+              <p>8.11 - {{ "8:11" | translate }}</p>
+            </div>
+          </div>
+        </aside>
+        <aside class="popup-container" *ngIf="isOpenSliderSecondPopupOpen">
+          <button class="closeSlider" (click)="closePopup('openSliderSecond')">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide popup-content"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="imageCarousel dayTwoFirst imageCarousel"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoSecond imageCarousel"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThird imageCarousel"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoSixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoSeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoEleventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwelfth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFourteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFifteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoSixteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoSeventeenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoEighteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoNineteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoTwentyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoThirtyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFortyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayTwoFiftyEighth"></div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+      </aside>
+      <aside class="dayThree">
+        <aside class="FirstContaier" (click)="openPopup('openSliderThird')">
+          <div class="dayThreeImage">
+            <div class="imga">
+              <p>9.11 - {{ "9:11" | translate }}</p>
+            </div>
+          </div>
+        </aside>
+        <aside class="popup-container" *ngIf="isOpenSliderThirdPopupOpen">
+          <button class="closeSlider" (click)="closePopup('openSliderThird')">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide popup-content"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="dayThreeFirst imageCarousel"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeEleventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwelfth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFourteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFifteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSeventeenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeEighteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeNineteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeTwentyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeThirtyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFortyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeFiftyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSixtyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSeventieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSeventyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayThreeSeventySecond"></div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+      </aside>
+      <aside class="dayFour">
+        <aside class="FirstContaier" (click)="openPopup('openSliderFourth')">
+          <div class="dayFourImage">
+            <div class="imga">
+              <p>{{ "picnic" | translate }}</p>
+            </div>
+          </div>
+        </aside>
+        <aside class="popup-container" *ngIf="isOpenSliderFourthPopupOpen">
+          <button class="closeSlider" (click)="closePopup('openSliderFourth')">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide popup-content"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="imageCarousel dayFourFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourSecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourSixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourSeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourTenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourEleventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourTwelfth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourThirteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourFourteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourFifteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourSixteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourSeventeenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourEighteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourNineteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourTwentieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourTwentyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFourTwentySecond"></div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+      </aside>
+      <aside class="dayFive">
+        <aside class="FirstContaier" (click)="openPopup('openSliderFiveth')">
+          <div class="dayFiveImage">
+            <div class="imga">
+              <p>{{ "Presentation_places" | translate }}</p>
+            </div>
+          </div>
+        </aside>
+        <aside class="popup-container" *ngIf="isOpenSliderFivethPopupOpen">
+          <button class="closeSlider" (click)="closePopup('openSliderFiveth')">
+            <i class="fa-solid fa-x"></i>
+          </button>
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide popup-content"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="imageCarousel dayFiveFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveSecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveSixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveSeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveEleventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwelfth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveFourteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveFifteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveSixteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveSeventeenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveEighteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveNineteenth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentySeventh"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyEighth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveTwentyNinth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtieth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtyFirst"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtySecond"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtyThird"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtyFourth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtyFifth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtySixth"></div>
+              </div>
+              <div class="carousel-item">
+                <div class="imageCarousel dayFiveThirtySeventh"></div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </aside>
+      </aside>
+    </aside>
+  </section>
+  <section id="sponsores" class="sponsors">
+    <aside class="sponsorsPart">
+      <h1>{{ "Organized_By" | translate }}</h1>
+      <aside class="sectionSporsors">
+        <div class="imge"></div>
+        <a href="https://mepa.gov.ge/" target="_blank">{{
+          "imge" | translate
+        }}</a>
+        <div class="dac"></div>
+        <a href="https://apa.gov.ge/ge/" target="_blank">{{
+          "dac" | translate
+        }}</a>
+      </aside>
+      <h1>{{ "Organizing_Partner" | translate }}</h1>
+      <aside class="sectionSporsorsOne">
+        <div class="gc"></div>
+        <a href="https://globalconservation.org/" target="_blank">{{
+          "gc" | translate
+        }}</a>
+      </aside>
+      <h1>{{ "TECHNICAL_LEADER" | translate }}</h1>
+      <aside class="sectionSporsorsOne">
+        <div class="Colo"></div>
+        <a href="https://warnercnr.colostate.edu/cpam/" target="_blank">{{
+          "Colo" | translate
+        }}</a>
+      </aside>
+      <h1>{{ "Co_Sponsors" | translate }}</h1>
+      <aside class="partners">
+        <aside class="sectionSporsors">
+          <div class="cnf"></div>
+          <a href="https://www.caucasus-naturefund.org/" target="_blank">{{
+            "cnf" | translate
+          }}</a>
+          <div class="gb"></div>
+          <a href="https://bankofgeorgia.ge/ka/" target="_blank">{{
+            "gb" | translate
+          }}</a>
+        </aside>
+        <aside class="sectionSporsors">
+          <div class="gef"></div>
+          <a href="https://www.thegef.org/" target="_blank">{{
+            "gef" | translate
+          }}</a>
+          <div class="undp"></div>
+          <a href="https://www.undp.org/" target="_blank">{{
+            "undp" | translate
+          }}</a>
+        </aside>
+        <aside class="sectionSporsors">
+          <div class="usid"></div>
+          <a href="https://www.usaid.gov/" target="_blank">{{
+            "usid" | translate
+          }}</a>
+          <div class="sub"></div>
+          <a href="https://www.sabuko.org/en/" target="_blank">{{
+            "sub" | translate
+          }}</a>
+        </aside>
+        <aside class="sectionSporsorsZuc">
+          <div class="zuc"></div>
+          <a href="https://www.succow-stiftung.de/en/" target="_blank">{{
+            "zuc" | translate
+          }}</a>
+        </aside>
+      </aside>
+    </aside>
+  </section>
+  <section class="map">
+    <section class="contact">
+      <div class="infoText">
+        <span
+          ><a target="_blank" href="tel:+995 592 10 90 80">+995 592 10 90 80</a>
+        </span>
+        <span
+          ><a target="_blank" href="mailto: borjomisummit@apa.gov.ge">
+            borjomisummit&#64;apa.gov.ge</a
+          ></span
+        >
+        <aside class="social">
+          <span>
+            <a href="https://apa.gov.ge/ge/" target="_blank"
+              ><i class="fa-solid fa-earth-americas"></i></a
+          ></span>
+          <span
+            ><a target="_blank" href="https://www.facebook.com/apa.gov.ge/"
+              ><i class="fa-brands fa-facebook"></i></a
+          ></span>
+          <span
+            ><a
+              target="_blank"
+              href="https://www.youtube.com/results?search_query=%E1%83%93%E1%83%90%E1%83%AA%E1%83%A3%E1%83%9A%E1%83%98+%E1%83%A2%E1%83%94%E1%83%A0%E1%83%98%E1%83%A2%E1%83%9D%E1%83%A0%E1%83%98%E1%83%94%E1%83%91%E1%83%98%E1%83%A1+%E1%83%A1%E1%83%90%E1%83%90%E1%83%92%E1%83%94%E1%83%9C%E1%83%A2%E1%83%9D"
+              ><i class="fa-brands fa-youtube"></i></a
+          ></span>
+        </aside>
+      </div>
+    </section>
+    <iframe
+      display="none"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1451.5940556984917!2d43.387315822892795!3d41.83672928496086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40433988996fcafd%3A0xea14db82fb9e3e8e!2sCrowne%20Plaza%20Borjomi%2C%20an%20IHG%20Hotel!5e1!3m2!1sen!2sge!4v1697809623804!5m2!1sen!2sge"
+      width=""
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+  <app-footer style="width: 100%"></app-footer>
+</main>

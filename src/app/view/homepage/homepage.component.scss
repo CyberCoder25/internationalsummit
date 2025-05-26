@@ -1,0 +1,3322 @@
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mtavruli-bold/css/bpg-nino-mtavruli-bold.min.css");
+
+*{
+      list-style: none;
+      text-decoration: none;
+}
+
+main{
+      top: 5rem;
+      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
+
+      .background{
+            font-family: var(--general-font-family);
+            min-height: 88vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./assete/mainImage.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            
+            aside.form{
+                  width: 90%;
+                  height: 73%;
+                  position: absolute;
+                  max-height: 100%;
+                  display: flex;
+                  justify-content: flex-end;
+                  flex-direction: column;
+                  gap: 1rem;
+                  color: var(--secondary-color);
+                  text-align: justify;
+
+                  h3:nth-child(3){  
+                        position: relative;
+                        z-index: 1;
+                        color: var(--active-color);
+                        opacity: 0;
+                        animation: fadeInnth 2s ease-in-out forwards;
+//hover
+&::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 27.5%;
+      height: 10%;
+      background: var(--hover-color) ;
+      transform: scale(0);
+      transition: transform 0.4s;
+      }
+      
+      &:hover::before {
+      transform: scale(1);
+      }
+
+      
+                        @keyframes fadeInnth {
+                              0% {
+                                  opacity: 0;
+                                  transform: translateX(5%);
+                              }
+                              100% {
+                                  opacity: 1;
+                                  transform: translateX(0);
+                              }
+                        }
+                  } 
+
+                  h2,
+                  h3{
+                        opacity: 0;
+                        animation: fadeIn 2s ease-in-out forwards;
+      
+                        @keyframes fadeIn {
+                              0% {
+                                  opacity: 0;
+                                  transform: translateY(-100%);
+                              }
+
+                              100% {
+                                  opacity: 1;
+                                  transform: translateY(0);
+                              }
+                        }
+                        
+                  }
+
+                  h3:nth-child(2){
+                        font-family: var(--general-font-family); 
+                        opacity: 0;
+                        animation: fadeInh2 2s ease-in-out forwards;
+      
+                        @keyframes fadeInh2 {
+                              0% {
+                                  opacity: 0;
+                                  transform: translateX(-10%);
+                              }
+
+                              100% {
+                                  opacity: 1;
+                                  transform: translateX(0);
+                              }
+                        }
+                  }
+            }
+      }  
+      
+      section.scroll{
+            button{
+                  position: fixed;
+                  bottom: 3rem;
+                  right: 3rem;
+                  z-index: 100;
+                  border-radius: 50%;
+                  background-color:  #008b8b;
+                  border-color: transparent;
+            }
+      
+      }
+
+      section.content{
+            margin: 2rem 0;
+            height: 115%;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            row-gap: 1rem;
+
+            article.control{
+                  background-color: #fff;
+                  width: 50%;
+                  padding: 1rem;
+                  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                  border-radius: 1rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: justify;
+                  column-gap: 1rem;
+                  
+                  .line-breaks {
+                        white-space: pre-line;
+                  }
+                  
+                  aside.text{
+                        display: grid;
+                        place-items: center;
+                        height: 100%;
+                        width: 100%;
+                        row-gap: 1rem;
+
+                       h3{
+                             border-bottom: 1px solid black;
+                             font-weight: bolder;
+                             font-family: var(--general-font-family);
+                        }
+
+                        a{
+                              margin: 0 auto;
+                              display: grid;
+                              place-items: center;
+                              height: 3rem;
+                              font-family: var(--general-font-family);
+                              background-color: var(--active-color);
+                              width: 25%;
+                              position: relative;
+                              z-index: 1;
+                              color: #fff;
+
+    &::before {
+        color: #fff;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top left, lightblue 0%, transparent 100%);
+        transform: scale(0);
+        transition: transform 0.6s;
+      }
+
+      &:hover::before {
+        transform: scale(1);
+      }
+      
+      
+                        }     
+                  }
+            }
+      }
+
+      section.carouselText{
+            min-height: 88dvh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            grid-template-rows: 6fr 1fr;
+            color: #fff;
+            background-image: url(./assete/tree2.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            
+            .carousel{
+                  width: 90%;
+                  display: grid;
+                  place-items: center;
+                  text-align: justify;
+
+                  div.carousel-inner{
+                        //აქ გაუწერე ტექსტს სიმაღლე
+                        background-color: rgba(255, 255, 255, 0.8);
+                        width: 77%;
+                        border-radius: 1rem;
+         
+                        div.carousel-item{
+                              height: 50dvh; 
+                              overflow: auto;
+                              padding: 1rem;
+                              width: 100%;
+
+                              .line-breaks {
+                                    white-space: pre-line;
+                              }
+
+                              h3{
+                                    border-bottom: 1px solid black;
+                                    color: black;
+                                    font-size: 2rem;
+                                    font-family: var(--general-font-family);
+                              }
+                              p{
+                                    color: black;
+                                    font-family: var(--general-font-family);
+                                    font-size: 1.2rem;
+                              }
+                              ul{
+                                    padding-left: 1rem;
+                                    color: black;
+                                    text-align: justify;
+
+                                    li{
+                                          p{
+                                                color: black;
+                                                font-family: var(--general-font-family);
+                                                font-size: 1.2rem;
+                                          }
+                                    }
+                              }
+                        }
+                  }
+
+                  .carousel-control-next-icon{
+                        margin: 0 0 0 0.3rem;
+                        background-color: black;
+                  }
+
+                  .carousel-control-prev-icon{
+                        margin: 0.3rem 0 0 0;
+                        background-color: black;
+                  }
+            }  
+
+            section.download{
+                  width: 30%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  
+                  a{
+                        width: 100%;
+                        display: grid;
+                        place-items: center;
+                        font-weight: 500;
+                        letter-spacing: 0.1rem;
+                        height: 3rem;
+                        background-color: var(--active-color);
+                        position: relative;
+                        z-index: 1;
+                        color: #fff;
+                        font-size: 1.2rem;
+                        border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;
+                        
+      &::before {
+      border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;
+      color: #fff;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top left, lightblue 0%, transparent 100%);
+      transform: scale(0);
+      transition: transform 0.6s;
+      }
+      
+      &:hover::before {
+      border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;
+      transform: scale(1);
+      }}
+            }
+
+      }  
+       
+      section.speakers{
+            width: 100%;
+            padding: 1rem 0;
+            height: 104%;
+            display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            max-width: 1000px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5rem;
+
+            article.my-container{
+                  width: 100%;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap: 2rem;
+
+                  div.card{
+                        box-shadow: 0 6px 12px rgba(0,0,0, .175);
+
+                        h5{
+                              cursor: pointer;
+                              font-family: var(--general-font-family);
+                        }
+                        p{
+                              cursor: pointer;
+                        }
+
+                        div.speakerFirst{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/JeffMorgan.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwo{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/jimbarboraki.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        } 
+
+                        div.speakerThree{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/MichaelFinley.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerFour{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/MichaelSutton.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerFive{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/ElizabethMessud.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerSix{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/ErikIlles.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerSeven{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/ErinHicks.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerEight{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/dataKobakhidze.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerNine{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/NinoAntadze.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/AnzorGogotidze.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerEleven{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/KarloAmirgulashvili.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwelve{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/MakaBitsadze.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTherteen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url("./assete/Vanovashakmadze.jpg");      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerFourteen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/PaataShanshiashvili.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerSixteen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url("./assete/Slobodian.jpg");      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerSeventeen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url("./assete/mustafagonen.jpg");      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerEighteen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url("./assete/DuncanGrossart.jpg");      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerNineteen{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/ZurabGurgenidze.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwenty{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/tobyaykroyd.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyOne{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/jessicagraham.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyTwo{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/OleksandrKuseliuk.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyThree{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/AnelaStavrevska.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyFour{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/AnastasiaDrapaliuk.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyFive{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/FidorHamor.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentySix{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/FirthGRIFFITH.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentySeven{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/PaulStephens.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyEight{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/NatoSultanishvili.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerTwentyNine{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/TamarKhakhishvili.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        div.speakerThirty{      
+                              height: 320px;      
+                              width: 100%;      
+                              border-top-right-radius: 0.3rem;
+                              border-top-left-radius: 0.3rem;      
+                              background-image: url(./assete/jenswunderlich.jpg);      
+                              background-position: center;      
+                              background-repeat: no-repeat;      
+                              cursor: pointer;
+                              background-size: cover;
+                        }
+
+                        .card-body{
+                              display: flex;
+                              flex-direction: column;
+                              justify-content: space-between;
+                              row-gap: 1rem;
+
+                              .line-breaks {
+                                    white-space: pre-line;
+                              }
+
+                              button{
+                                    border-color: transparent;
+                                    border-radius: 50%;
+                                    height: 2.5rem;
+                                    width: 2.5rem;
+                                    color: #fff;
+                                    background-color: var(--active-color);
+                              }
+
+                              .popup-container {
+                                    z-index: 10000000000000000000000;
+                                    position: fixed;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: white;
+                                    padding: 5rem 3rem;
+                                    
+                                    .speakerFirst,
+                                    .speakerTwo,
+                                    .speakerThree,
+                                    .speakerFour,
+                                    .speakerFive,
+                                    .speakerSix,
+                                    .speakerSeven,
+                                    .speakerEight,
+                                    .speakerNine,
+                                    .speakerTen,
+                                    .speakerEleven,
+                                    .speakerTwelve,
+                                    .speakerTherteen,
+                                    .speakerFourteen,
+                                    .speakerFiveteen,
+                                    .speakerSixteen,
+                                    .speakerSeventeen,
+                                    .speakerEighteen,
+                                    .speakerNineteen,
+                                    .speakerTwenty,
+                                    .speakerTwentyOne,
+                                    .speakerTwentyTwo,
+                                    .speakerTwentyThree,
+                                    .speakerTwentyFour,
+                                    .speakerTwentyFive,
+                                    .speakerTwentySix,
+                                    .speakerTwentySeven,
+                                    .speakerTwentyEight,
+                                    .speakerTwentyNine,
+                                    .speakerThirty
+                                    {
+                                          margin-right:  1.5rem;
+                                          float: left;
+                                          width: 320px;
+                                          height: 320px;
+                                    }
+                                        
+                                    .popup-content {
+                                          text-align: justify;
+                                    }
+                                        
+                                    button.close {
+                                          position: absolute;
+                                          background-color: transparent;
+                                          top: 2rem;
+                                          right: 2rem;
+                                          font-size: 2rem;
+                                    }
+                                        
+                              }
+                        }                        
+                  }
+            }
+      }
+
+      hr{
+            width: 100%; 
+            border: 10px solid #1f2532;
+            opacity: 1;
+            box-shadow: 0 20px 40px rgba(9, 8, 8, 1);
+      }
+
+      section.presentation {
+            background: #1f2532; 
+            height: 300px;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1rem;
+            box-shadow: 40px 40px 40px 40px rgba(9, 8, 8, 1);
+            margin-bottom: 5rem;
+
+          
+            & > div {
+                  color: #ffffff; 
+                  font-size: 1.5rem;
+                  margin-bottom: 1rem;
+            }
+          
+            .preAside {
+                  border-radius: 1rem;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: center;
+                  height: 100%;
+                  width: 70%;
+                  position: relative;
+                  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+                  background: #364156; 
+          
+              button {
+                  position: relative;
+                  text-align: left;
+                  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+                  background: #293544;
+                  color: #fff;
+                  padding: 1rem;
+                  border: 1px solid #1f2b38;
+          
+                  &:first-child {
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                  }
+          
+                  &:last-child {
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                  }
+          
+                  ul{
+                  padding: 0;
+                  margin: 0;
+          
+                  li {
+                    border-top: 1px solid #1f2b38;
+                    border-bottom: 1px solid #1f2b38;
+                    padding: 0.5rem 0;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+          
+                  
+      section.gallery{
+            margin: 3rem 0;
+            height: 100vh; 
+            width: 100%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            hr{
+                  width: 100%; 
+                  border: 10px solid black;
+                  box-shadow: 0 20px 40px rgba(9, 8, 8, 1);
+            }
+
+            h1{
+                  margin-bottom: 0;
+            }
+
+            .mainContainer{
+                  height: 100%;
+                  width: 70%;
+                  display: grid;
+                  gap: 2rem;
+                  grid-template-columns: 1fr 1fr 1fr;
+   
+                  .dayOne,
+                  .dayTwo,
+                  .dayThree,
+                  .dayFour,
+                  .dayFive{
+                        border-top-right-radius: 0.3rem;
+                        border-top-left-radius: 0.3rem;
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
+                        box-shadow: 0 6px 12px rgba(0,0,0, .175);
+      
+                        .FirstContaier{
+                              height: 100%;
+                              width: 100%;
+                        
+                                    .dayOneImage{
+                                          border-top-right-radius: 0.3rem;
+                                          border-top-left-radius: 0.3rem;
+                                          background-image: url(./gallery/dayOne/1.jpg);
+                                    }
+
+                                    .dayTwoImage{
+                                          border-top-right-radius: 0.3rem;
+                                          border-top-left-radius: 0.3rem;
+                                          background-image: url(./gallery/dayTwo/1.jpg);
+                                    }
+
+                                    .dayThreeImage{
+                                          border-top-right-radius: 0.3rem;
+                                          border-top-left-radius: 0.3rem;
+                                          background-image: url(./gallery/dayThree/1.jpg);
+                                    }
+
+                                    .dayFourImage{
+                                          border-top-right-radius: 0.3rem;
+                                          border-top-left-radius: 0.3rem;
+                                          background-image: url(./gallery/picnic/1.jpg);
+                                    }
+
+                                    .dayFiveImage{
+                                          border-top-right-radius: 0.3rem;
+                                          border-top-left-radius: 0.3rem;
+                                          background-image: url(./gallery/presentation/1.jpg);
+                                    }
+
+                              .dayOneImage,
+                              .dayTwoImage,
+                              .dayThreeImage,
+                              .dayFourImage,
+                              .dayFiveImage{
+                                    position: relative;
+                                    height: 100%;      
+                                    width: 100%;      
+                                    background-position: center;      
+                                    background-repeat: no-repeat;      
+                                    background-size: cover;
+                                    overflow: hidden;
+      
+                                    .imga{
+                                          height: 20%;      
+                                          width: 100%;
+                                          color: #fff;
+                                          background-color: rgba(128, 128, 128, 0.9);
+                                          position: absolute;
+                                          bottom: 0;
+      
+                                          p{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                          }
+                                    }
+      
+                                    &:hover {
+                                          .imga {
+                                                height: 100%;
+                                                width: 100%;
+                                                background-color: rgba(128, 128, 128, 0.9);
+                                                display: grid;
+                                                place-items: center;
+                                                transition: 0.7s;
+                                          }
+                                    }
+                              }
+                  
+                        }
+
+                        .popup-container {
+                              z-index: 100;
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(145, 128, 128, 0.7);
+                              padding: 5rem 3rem;
+            
+                              .closeSlider,
+                              .carousel-control-prev,
+                              .carousel-control-next
+                              {
+                                    height: 5rem;
+                                    width: 5rem;
+                                    position: absolute;
+                                    top: 2rem;
+                                    right: 8rem;
+                                    font-size: 2rem;
+                                    background-color: #222;
+                                    color: #fff;
+                                    border-radius: 50%;
+                                    display: grid;
+                                    place-items: center;
+                                    border-color: transparent;
+                              }
+
+                              .carousel-control-prev,
+                              .carousel-control-next {
+                                  top: 50%;
+                                  transform: translateY(-50%);                                 
+                              }
+
+                              .closeSlider{
+                                    right: 4.5rem;
+                              }
+                              
+                              .carousel-control-prev {
+                                    left: 2rem; 
+                              }
+                            
+                              .carousel-control-next {
+                                  right: 2rem; 
+                              }
+            
+                              .carousel-inner{
+                                    height: 100%;
+                                    width: 100%;
+            
+                                    .carousel-item {
+                                         padding: 0 20rem;
+
+                                         .imageCarousel
+                                         {
+                                               height: 500px;      
+                                               width: 700px;      
+                                               background-position: center;      
+                                               background-repeat: no-repeat;      
+                                               background-size: cover;
+                                         }
+            
+                                          .one{
+                                                background-image: url(./gallery/dayOne/1.jpg);
+                                          }
+                                          .two{
+                                                background-image: url(./gallery/dayOne/2.jpg);      
+                                          }
+                                          .three{
+                                                background-image: url(./gallery/dayOne/3.jpg);      
+                                          }
+                                          .four{
+                                                background-image: url(./gallery/dayOne/4.jpg);      
+                                          }
+                                          .five{
+                                                background-image: url(./gallery/dayOne/5.jpg);      
+                                          }
+                                          .six{
+                                                background-image: url(./gallery/dayOne/6.jpg);      
+                                          }
+                                          .seven{
+                                                background-image: url(./gallery/dayOne/7.jpg);      
+                                          }
+                                          .eight{
+                                                background-image: url(./gallery/dayOne/8.jpg);      
+                                          }
+                                          .nine{
+                                                background-image: url(./gallery/dayOne/9.jpg);      
+                                          }
+                                          .ten{
+                                                background-image: url(./gallery/dayOne/10.jpg);      
+                                          }
+                                          .eleven{
+                                                background-image: url(./gallery/dayOne/11.jpg);      
+                                          }
+                                          .twelve{
+                                                background-image: url(./gallery/dayOne/12.jpg);      
+                                          }
+                                          .thirteen{
+                                                background-image: url(./gallery/dayOne/13.jpg);      
+                                          }
+                                          .fourteen{
+                                                background-image: url(./gallery/dayOne/14.jpg);      
+                                          }
+                                          .fiveteen{
+                                                background-image: url(./gallery/dayOne/15.jpg);      
+                                          }
+                                          .sixteen{
+                                                background-image: url(./gallery/dayOne/16.jpg);      
+                                          }
+                                          .seventeen{
+                                                background-image: url(./gallery/dayOne/17.jpg);      
+                                          }
+                                          .eighteen{
+                                                background-image: url(./gallery/dayOne/18.jpg);      
+                                          }
+                                          .ninteen{
+                                                background-image: url(./gallery/dayOne/19.jpg);      
+                                          }
+                                          .twenty{
+                                                background-image: url(./gallery/dayOne/20.jpg);      
+                                          }
+                                          .twentyone {
+                                                background-image: url(./gallery/dayOne/21.jpg);
+                                              }
+                                              
+                                          .twentytwo {
+                                            background-image: url(./gallery/dayOne/22.jpg);
+                                          }
+                                          
+                                          .twentythree {
+                                            background-image: url(./gallery/dayOne/23.jpg);
+                                          }
+                                          
+                                          .twentyfour {
+                                            background-image: url(./gallery/dayOne/24.jpg);
+                                          }
+                                          
+                                          .twentyfive {
+                                            background-image: url(./gallery/dayOne/25.jpg);
+                                          }
+                                          
+                                          .twentysix {
+                                            background-image: url(./gallery/dayOne/26.jpg);
+                                          }
+                                          
+                                          .twentyseven {
+                                            background-image: url(./gallery/dayOne/27.jpg);
+                                          }
+                                          
+                                          .twentyeight {
+                                            background-image: url(./gallery/dayOne/28.jpg);
+                                          }
+                                          
+                                          .twentynine {
+                                            background-image: url(./gallery/dayOne/29.jpg);
+                                          }
+                                          
+                                          .thirty {
+                                            background-image: url(./gallery/dayOne/30.jpg);
+                                          }
+                                          
+                                          .thirtyone {
+                                            background-image: url(./gallery/dayOne/31.jpg);
+                                          }
+                                          
+                                          .thirtytwo {
+                                            background-image: url(./gallery/dayOne/32.jpg);
+                                          }
+                                          
+                                          .thirtythree {
+                                            background-image: url(./gallery/dayOne/33.jpg);
+                                          }
+                                          
+                                          .thirtyfour {
+                                            background-image: url(./gallery/dayOne/34.jpg);
+                                          }
+                                          
+                                          .thirtyfive {
+                                            background-image: url(./gallery/dayOne/35.jpg);
+                                          }
+                                          
+                                          .thirtysix {
+                                            background-image: url(./gallery/dayOne/36.jpg);
+                                          }
+                                          
+                                          .thirtyseven {
+                                            background-image: url(./gallery/dayOne/37.jpg);
+                                          }
+                                          .thirtyeight {
+                                                background-image: url(./gallery/dayOne/38.jpg);
+                                          }
+                                          
+                                          .thirtynine {
+                                            background-image: url(./gallery/dayOne/39.jpg);
+                                          }
+                                          
+                                          .forty {
+                                            background-image: url(./gallery/dayOne/40.jpg);
+                                          }
+                                          
+                                          .fortyone {
+                                            background-image: url(./gallery/dayOne/41.jpg);
+                                          }
+                                          
+                                          .fortytwo {
+                                            background-image: url(./gallery/dayOne/42.jpg);
+                                          }
+                                          
+                                          .fortythree {
+                                            background-image: url(./gallery/dayOne/43.jpg);
+                                          }
+                                          
+                                          .fortyfour {
+                                            background-image: url(./gallery/dayOne/44.jpg);
+                                          }
+                                          
+                                          .fortyfive {
+                                            background-image: url(./gallery/dayOne/45.jpg);
+                                          }
+                                          
+                                          .fortysix {
+                                            background-image: url(./gallery/dayOne/46.jpg);
+                                          }
+                                          
+                                          .fortyseven {
+                                            background-image: url(./gallery/dayOne/47.jpg);
+                                          }
+                                          
+                                          .fortyeight {
+                                            background-image: url(./gallery/dayOne/48.jpg);
+                                          }
+                                          
+                                          .fortynine {
+                                            background-image: url(./gallery/dayOne/49.jpg);
+                                          }
+                                          
+                                          .fifty {
+                                            background-image: url(./gallery/dayOne/50.jpg);
+                                          }
+                                          .fiftyone {
+                                                background-image: url(./gallery/dayOne/51.jpg);
+                                          }
+                                          
+                                          .fiftytwo {
+                                            background-image: url(./gallery/dayOne/52.jpg);
+                                          }
+                                          
+                                          .fiftythree {
+                                            background-image: url(./gallery/dayOne/53.jpg);
+                                          }
+                                          
+                                          .fiftyfour {
+                                            background-image: url(./gallery/dayOne/54.jpg);
+                                          }
+                                          
+                                          .fiftyfive {
+                                            background-image: url(./gallery/dayOne/55.jpg);
+                                          }
+                                          
+                                          .fiftysix {
+                                            background-image: url(./gallery/dayOne/56.jpg);
+                                          }
+                                          
+                                          .fiftyseven {
+                                            background-image: url(./gallery/dayOne/57.jpg);
+                                          }
+                                          
+                                          .fiftyeight {
+                                            background-image: url(./gallery/dayOne/58.jpg);
+                                          }
+                                          
+                                          .fiftynine {
+                                            background-image: url(./gallery/dayOne/59.jpg);
+                                          }
+                                          
+                                          .sixty {
+                                            background-image: url(./gallery/dayOne/60.jpg);
+                                          }
+                                          
+                                          .sixtyone {
+                                            background-image: url(./gallery/dayOne/61.jpg);
+                                          }
+                                          
+                                          .sixtytwo {
+                                            background-image: url(./gallery/dayOne/62.jpg);
+                                          }
+                                          
+                                          .sixtythree {
+                                            background-image: url(./gallery/dayOne/63.jpg);
+                                          }
+                                          
+                                          .sixtyfour {
+                                            background-image: url(./gallery/dayOne/64.jpg);
+                                          }
+                                          
+                                          .sixtyfive {
+                                            background-image: url(./gallery/dayOne/65.jpg);
+                                          }
+                                          
+                                          .sixtysix {
+                                            background-image: url(./gallery/dayOne/66.jpg);
+                                          }
+                                          
+                                          .sixtyseven {
+                                            background-image: url(./gallery/dayOne/67.jpg);
+                                          }
+                                          
+                                          .sixtyeight {
+                                            background-image: url(./gallery/dayOne/68.jpg);
+                                          }
+                                          
+                                          .sixtynine {
+                                            background-image: url(./gallery/dayOne/69.jpg);
+                                          }
+                                          
+                                          .seventy {
+                                            background-image: url(./gallery/dayOne/70.jpg);
+                                          }
+                                          
+                                          .seventyone {
+                                            background-image: url(./gallery/dayOne/71.jpg);
+                                          }
+                                          
+                                          .seventytwo {
+                                            background-image: url(./gallery/dayOne/72.jpg);
+                                          }
+                                          
+                                          .seventythree {
+                                            background-image: url(./gallery/dayOne/73.jpg);
+                                          }
+                                          
+                                          .seventyfour {
+                                            background-image: url(./gallery/dayOne/74.jpg);
+                                          }
+                                          
+                                          .seventyfive {
+                                            background-image: url(./gallery/dayOne/75.jpg);
+                                          }
+                                          .seventysix {
+                                                background-image: url(./gallery/dayOne/76.jpg);
+                                          }
+                                          
+                                          .seventyseven {
+                                            background-image: url(./gallery/dayOne/77.jpg);
+                                          }
+                                          
+                                          .seventyeight {
+                                            background-image: url(./gallery/dayOne/78.jpg);
+                                          }
+                                          
+                                          .seventynine {
+                                            background-image: url(./gallery/dayOne/79.jpg);
+                                          }
+                                          
+                                          .eighty {
+                                            background-image: url(./gallery/dayOne/80.jpg);
+                                          }
+                                          
+                                          .eightyone {
+                                            background-image: url(./gallery/dayOne/81.jpg);
+                                          }
+                                          
+                                          .eightytwo {
+                                            background-image: url(./gallery/dayOne/82.jpg);
+                                          }
+                                          
+                                          .eightythree {
+                                            background-image: url(./gallery/dayOne/83.jpg);
+                                          }
+                                          
+                                          .eightyfour {
+                                            background-image: url(./gallery/dayOne/84.jpg);
+                                          }
+                                          
+                                          .eightyfive {
+                                            background-image: url(./gallery/dayOne/85.jpg);
+                                          }
+                                          
+                                          .eightysix {
+                                            background-image: url(./gallery/dayOne/86.jpg);
+                                          }
+                                          
+                                          .eightyseven {
+                                            background-image: url(./gallery/dayOne/87.jpg);
+                                          }
+                                          
+                                          .eightyeight {
+                                            background-image: url(./gallery/dayOne/88.jpg);
+                                          }
+                                          
+                                          .eightynine {
+                                            background-image: url(./gallery/dayOne/89.jpg);
+                                          }
+                                          
+                                          .ninety {
+                                            background-image: url(./gallery/dayOne/90.jpg);
+                                          }
+                                          
+                                          .ninetyone {
+                                            background-image: url(./gallery/dayOne/91.jpg);
+                                          }
+                                          
+                                          .ninetytwo {
+                                            background-image: url(./gallery/dayOne/92.jpg);
+                                          }
+                                          
+                                          .ninetythree {
+                                            background-image: url(./gallery/dayOne/93.jpg);
+                                          }
+                                          
+                                          .ninetyfour {
+                                            background-image: url(./gallery/dayOne/94.jpg);
+                                          }
+                                          
+                                          .ninetyfive {
+                                            background-image: url(./gallery/dayOne/95.jpg);
+                                          }
+                                          
+                                          .ninetysix {
+                                            background-image: url(./gallery/dayOne/96.jpg);
+                                          }
+                                          
+                                          .ninetyseven {
+                                            background-image: url(./gallery/dayOne/97.jpg);
+                                          }
+                                          
+                                          .ninetyeight {
+                                            background-image: url(./gallery/dayOne/98.jpg);
+                                          }
+                                          
+                                          .ninetynine {
+                                            background-image: url(./gallery/dayOne/99.jpg);
+                                          }
+                                          
+                                          .hundred {
+                                            background-image: url(./gallery/dayOne/100.jpg);
+                                          }
+                                          
+                                          .hundredone {
+                                            background-image: url(./gallery/dayOne/101.jpg);
+                                          }
+                                          
+                                          .hundredtwo {
+                                            background-image: url(./gallery/dayOne/102.jpg);
+                                          }
+                                          
+                                          .hundredthree {
+                                            background-image: url(./gallery/dayOne/103.jpg);
+                                          }
+                                          
+                                          .hundredfour {
+                                            background-image: url(./gallery/dayOne/104.jpg);
+                                          }
+                                          
+                                          .hundredfive {
+                                            background-image: url(./gallery/dayOne/105.jpg);
+                                          }
+                                          .hundredsix {
+                                                background-image: url(./gallery/dayOne/106.jpg);
+                                          }
+                                          
+                                          .hundredseven {
+                                            background-image: url(./gallery/dayOne/107.jpg);
+                                          }
+                                          
+                                          .hundredeight {
+                                            background-image: url(./gallery/dayOne/108.jpg);
+                                          }
+                                          
+                                          .hundrednine {
+                                            background-image: url(./gallery/dayOne/109.jpg);
+                                          }
+                                          
+                                          .hundredten {
+                                            background-image: url(./gallery/dayOne/110.jpg);
+                                          }
+                                          
+                                          .hundredeleven {
+                                            background-image: url(./gallery/dayOne/111.jpg);
+                                          }
+                                          
+                                          .hundredtwelve {
+                                            background-image: url(./gallery/dayOne/112.jpg);
+                                          }
+                                          
+                                          .hundredthirteen {
+                                            background-image: url(./gallery/dayOne/113.jpg);
+                                          }
+                                          
+                                          .hundredfourteen {
+                                            background-image: url(./gallery/dayOne/114.jpg);
+                                          }
+
+                                          .dayTwoFirst{
+                                                background-image: url(./gallery/dayTwo/1.jpg);
+                                          }
+
+                                          .dayTwoSecond{
+                                                background-image: url(./gallery/dayTwo/2.jpg);
+                                          }
+
+                                          .dayTwoThird{
+                                                background-image: url(./gallery/dayTwo/3.jpg);
+                                          }
+
+                                          .dayTwoFourth {
+                                                background-image: url(./gallery/dayTwo/4.jpg);
+                                          }
+                                          
+                                          .dayTwoFifth {
+                                              background-image: url(./gallery/dayTwo/5.jpg);
+                                          }
+                                          
+                                          .dayTwoSixth {
+                                              background-image: url(./gallery/dayTwo/6.jpg);
+                                          }
+                                          
+                                          .dayTwoSeventh {
+                                              background-image: url(./gallery/dayTwo/7.jpg);
+                                          }
+                                          
+                                          .dayTwoEighth {
+                                              background-image: url(./gallery/dayTwo/8.jpg);
+                                          }
+                                          
+                                          .dayTwoNinth {
+                                              background-image: url(./gallery/dayTwo/9.jpg);
+                                          }
+                                          
+                                          .dayTwoTenth {
+                                              background-image: url(./gallery/dayTwo/10.jpg);
+                                          }
+                                          
+                                          .dayTwoEleventh {
+                                              background-image: url(./gallery/dayTwo/11.jpg);
+                                          }
+                                          
+                                          .dayTwoTwelfth {
+                                              background-image: url(./gallery/dayTwo/12.jpg);
+                                          }
+                                          
+                                          .dayTwoThirteenth {
+                                              background-image: url(./gallery/dayTwo/13.jpg);
+                                          }
+                                          
+                                          .dayTwoFourteenth {
+                                              background-image: url(./gallery/dayTwo/14.jpg);
+                                          }
+                                          
+                                          .dayTwoFifteenth {
+                                              background-image: url(./gallery/dayTwo/15.jpg);
+                                          }
+                                          
+                                          .dayTwoSixteenth {
+                                              background-image: url(./gallery/dayTwo/16.jpg);
+                                          }
+                                          
+                                          .dayTwoSeventeenth {
+                                              background-image: url(./gallery/dayTwo/17.jpg);
+                                          }
+                                          
+                                          .dayTwoEighteenth {
+                                              background-image: url(./gallery/dayTwo/18.jpg);
+                                          }
+                                          
+                                          .dayTwoNineteenth {
+                                              background-image: url(./gallery/dayTwo/19.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentieth {
+                                              background-image: url(./gallery/dayTwo/20.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentyFirst {
+                                              background-image: url(./gallery/dayTwo/21.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentySecond {
+                                              background-image: url(./gallery/dayTwo/22.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentyThird {
+                                              background-image: url(./gallery/dayTwo/23.jpg);
+                                          }
+                                          .dayTwoTwentyFourth {
+                                              background-image: url(./gallery/dayTwo/24.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentyFifth {
+                                              background-image: url(./gallery/dayTwo/25.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentySixth {
+                                              background-image: url(./gallery/dayTwo/26.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentySeventh {
+                                              background-image: url(./gallery/dayTwo/27.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentyEighth {
+                                              background-image: url(./gallery/dayTwo/28.jpg);
+                                          }
+                                          
+                                          .dayTwoTwentyNinth {
+                                              background-image: url(./gallery/dayTwo/29.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtieth {
+                                              background-image: url(./gallery/dayTwo/30.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyFirst {
+                                              background-image: url(./gallery/dayTwo/31.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtySecond {
+                                              background-image: url(./gallery/dayTwo/32.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyThird {
+                                              background-image: url(./gallery/dayTwo/33.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyFourth {
+                                              background-image: url(./gallery/dayTwo/34.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyFifth {
+                                              background-image: url(./gallery/dayTwo/35.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtySixth {
+                                              background-image: url(./gallery/dayTwo/36.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtySeventh {
+                                              background-image: url(./gallery/dayTwo/37.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyEighth {
+                                              background-image: url(./gallery/dayTwo/38.jpg);
+                                          }
+                                          
+                                          .dayTwoThirtyNinth {
+                                              background-image: url(./gallery/dayTwo/39.jpg);
+                                          }
+                                          
+                                          .dayTwoFortieth {
+                                              background-image: url(./gallery/dayTwo/40.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyFirst {
+                                              background-image: url(./gallery/dayTwo/41.jpg);
+                                          }
+                                          
+                                          .dayTwoFortySecond {
+                                              background-image: url(./gallery/dayTwo/42.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyThird {
+                                              background-image: url(./gallery/dayTwo/43.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyFourth {
+                                              background-image: url(./gallery/dayTwo/44.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyFifth {
+                                              background-image: url(./gallery/dayTwo/45.jpg);
+                                          }
+                                          
+                                          .dayTwoFortySixth {
+                                              background-image: url(./gallery/dayTwo/46.jpg);
+                                          }
+                                          
+                                          .dayTwoFortySeventh {
+                                              background-image: url(./gallery/dayTwo/47.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyEighth {
+                                              background-image: url(./gallery/dayTwo/48.jpg);
+                                          }
+                                          
+                                          .dayTwoFortyNinth {
+                                              background-image: url(./gallery/dayTwo/49.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftieth {
+                                              background-image: url(./gallery/dayTwo/50.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftyFirst {
+                                              background-image: url(./gallery/dayTwo/51.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftySecond {
+                                              background-image: url(./gallery/dayTwo/52.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftyThird {
+                                              background-image: url(./gallery/dayTwo/53.jpg);
+                                          }
+                                          .dayTwoFiftyFourth {
+                                              background-image: url(./gallery/dayTwo/54.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftyFifth {
+                                              background-image: url(./gallery/dayTwo/55.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftySixth {
+                                              background-image: url(./gallery/dayTwo/56.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftySeventh {
+                                              background-image: url(./gallery/dayTwo/57.jpg);
+                                          }
+                                          
+                                          .dayTwoFiftyEighth {
+                                              background-image: url(./gallery/dayTwo/58.jpg);
+                                          }
+
+                                          .dayThreeFirst {
+                                                background-image: url(./gallery/dayThree/1.jpg);
+                                          }
+
+                                          .dayThreeSecond {
+                                                background-image: url(./gallery/dayThree/2.jpg);
+                                          }
+                                              
+                                          .dayThreeThird {
+                                                background-image: url(./gallery/dayThree/3.jpg);
+                                          }
+                                          
+                                          .dayThreeFourth {
+                                                background-image: url(./gallery/dayThree/4.jpg);
+                                              }
+                                              
+                                              .dayThreeFifth {
+                                                background-image: url(./gallery/dayThree/5.jpg);
+                                              }
+                                              
+                                              .dayThreeSixth {
+                                                background-image: url(./gallery/dayThree/6.jpg);
+                                              }
+                                              
+                                              .dayThreeSeventh {
+                                                background-image: url(./gallery/dayThree/7.jpg);
+                                              }
+                                              
+                                              .dayThreeEighth {
+                                                background-image: url(./gallery/dayThree/8.jpg);
+                                              }
+                                              
+                                              .dayThreeNinth {
+                                                background-image: url(./gallery/dayThree/9.jpg);
+                                              }
+                                              
+                                              .dayThreeTenth {
+                                                background-image: url(./gallery/dayThree/10.jpg);
+                                              }
+                                              
+                                              .dayThreeEleventh {
+                                                background-image: url(./gallery/dayThree/11.jpg);
+                                              }
+                                              
+                                              .dayThreeTwelfth {
+                                                background-image: url(./gallery/dayThree/12.jpg);
+                                              }
+                                              
+                                              .dayThreeThirteenth {
+                                                background-image: url(./gallery/dayThree/13.jpg);
+                                              }
+                                              
+                                              .dayThreeFourteenth {
+                                                background-image: url(./gallery/dayThree/14.jpg);
+                                              }
+                                              
+                                              .dayThreeFifteenth {
+                                                background-image: url(./gallery/dayThree/15.jpg);
+                                              }
+                                              
+                                              .dayThreeSixteenth {
+                                                background-image: url(./gallery/dayThree/16.jpg);
+                                              }
+                                              
+                                              .dayThreeSeventeenth {
+                                                background-image: url(./gallery/dayThree/17.jpg);
+                                              }
+                                              
+                                              .dayThreeEighteenth {
+                                                background-image: url(./gallery/dayThree/18.jpg);
+                                              }
+                                              
+                                              .dayThreeNineteenth {
+                                                background-image: url(./gallery/dayThree/19.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentieth {
+                                                background-image: url(./gallery/dayThree/20.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyFirst {
+                                                background-image: url(./gallery/dayThree/21.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentySecond {
+                                                background-image: url(./gallery/dayThree/22.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyThird {
+                                                background-image: url(./gallery/dayThree/23.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyFourth {
+                                                background-image: url(./gallery/dayThree/24.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyFifth {
+                                                background-image: url(./gallery/dayThree/25.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentySixth {
+                                                background-image: url(./gallery/dayThree/26.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentySeventh {
+                                                background-image: url(./gallery/dayThree/27.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyEighth {
+                                                background-image: url(./gallery/dayThree/28.jpg);
+                                              }
+                                              
+                                              .dayThreeTwentyNinth {
+                                                background-image: url(./gallery/dayThree/29.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtieth {
+                                                background-image: url(./gallery/dayThree/30.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyFirst {
+                                                background-image: url(./gallery/dayThree/31.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtySecond {
+                                                background-image: url(./gallery/dayThree/32.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyThird {
+                                                background-image: url(./gallery/dayThree/33.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyFourth {
+                                                background-image: url(./gallery/dayThree/34.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyFifth {
+                                                background-image: url(./gallery/dayThree/35.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtySixth {
+                                                background-image: url(./gallery/dayThree/36.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtySeventh {
+                                                background-image: url(./gallery/dayThree/37.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyEighth {
+                                                background-image: url(./gallery/dayThree/38.jpg);
+                                              }
+                                              
+                                              .dayThreeThirtyNinth {
+                                                background-image: url(./gallery/dayThree/39.jpg);
+                                              }
+                                              
+                                              .dayThreeFortieth {
+                                                background-image: url(./gallery/dayThree/40.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyFirst {
+                                                background-image: url(./gallery/dayThree/41.jpg);
+                                              }
+                                              
+                                              .dayThreeFortySecond {
+                                                background-image: url(./gallery/dayThree/42.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyThird {
+                                                background-image: url(./gallery/dayThree/43.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyFourth {
+                                                background-image: url(./gallery/dayThree/44.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyFifth {
+                                                background-image: url(./gallery/dayThree/45.jpg);
+                                              }
+                                              
+                                              .dayThreeFortySixth {
+                                                background-image: url(./gallery/dayThree/46.jpg);
+                                              }
+                                              
+                                              .dayThreeFortySeventh {
+                                                background-image: url(./gallery/dayThree/47.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyEighth {
+                                                background-image: url(./gallery/dayThree/48.jpg);
+                                              }
+                                              
+                                              .dayThreeFortyNinth {
+                                                background-image: url(./gallery/dayThree/49.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftieth {
+                                                background-image: url(./gallery/dayThree/50.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyFirst {
+                                                background-image: url(./gallery/dayThree/51.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftySecond {
+                                                background-image: url(./gallery/dayThree/52.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyThird {
+                                                background-image: url(./gallery/dayThree/53.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyFourth {
+                                                background-image: url(./gallery/dayThree/54.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyFifth {
+                                                background-image: url(./gallery/dayThree/55.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftySixth {
+                                                background-image: url(./gallery/dayThree/56.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftySeventh {
+                                                background-image: url(./gallery/dayThree/57.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyEighth {
+                                                background-image: url(./gallery/dayThree/58.jpg);
+                                              }
+                                              
+                                              .dayThreeFiftyNinth {
+                                                background-image: url(./gallery/dayThree/59.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtieth {
+                                                background-image: url(./gallery/dayThree/60.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyFirst {
+                                                background-image: url(./gallery/dayThree/61.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtySecond {
+                                                background-image: url(./gallery/dayThree/62.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyThird {
+                                                background-image: url(./gallery/dayThree/63.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyFourth {
+                                                background-image: url(./gallery/dayThree/64.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyFifth {
+                                                background-image: url(./gallery/dayThree/65.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtySixth {
+                                                background-image: url(./gallery/dayThree/66.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtySeventh {
+                                                background-image: url(./gallery/dayThree/67.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyEighth {
+                                                background-image: url(./gallery/dayThree/68.jpg);
+                                              }
+                                              
+                                              .dayThreeSixtyNinth {
+                                                background-image: url(./gallery/dayThree/69.jpg);
+                                              }
+                                              
+                                              .dayThreeSeventieth {
+                                                background-image: url(./gallery/dayThree/70.jpg);
+                                              }
+                                              
+                                              .dayThreeSeventyFirst {
+                                                background-image: url(./gallery/dayThree/71.jpg);
+                                              }
+                                              
+                                              .dayThreeSeventySecond {
+                                                background-image: url(./gallery/dayThree/72.jpg);
+                                              }                                              
+
+                                          .dayFourFirst {
+                                            background-image: url(./gallery/picnic/1.jpg);
+                                          }
+                                          
+                                          .dayFourSecond {
+                                            background-image: url(./gallery/picnic/2.jpg);
+                                          }
+                                          
+                                          .dayFourThird {
+                                            background-image: url(./gallery/picnic/3.jpg);
+                                          }
+                                          
+                                          .dayFourFourth {
+                                            background-image: url(./gallery/picnic/4.jpg);
+                                          }
+                                          
+                                          .dayFourFifth {
+                                            background-image: url(./gallery/picnic/5.jpg);
+                                          }
+                                          
+                                          .dayFourSixth {
+                                            background-image: url(./gallery/picnic/6.jpg);
+                                          }
+                                          
+                                          .dayFourSeventh {
+                                            background-image: url(./gallery/picnic/7.jpg);
+                                          }
+                                          
+                                          .dayFourEighth {
+                                            background-image: url(./gallery/picnic/8.jpg);
+                                          }
+                                          
+                                          .dayFourNinth {
+                                            background-image: url(./gallery/picnic/9.jpg);
+                                          }
+                                          
+                                          .dayFourTenth {
+                                            background-image: url(./gallery/picnic/10.jpg);
+                                          }
+                                          
+                                          .dayFourEleventh {
+                                            background-image: url(./gallery/picnic/11.jpg);
+                                          }
+                                          
+                                          .dayFourTwelfth {
+                                            background-image: url(./gallery/picnic/12.jpg);
+                                          }
+                                          
+                                          .dayFourThirteenth {
+                                            background-image: url(./gallery/picnic/13.jpg);
+                                          }
+                                          
+                                          .dayFourFourteenth {
+                                            background-image: url(./gallery/picnic/14.jpg);
+                                          }
+                                          
+                                          .dayFourFifteenth {
+                                            background-image: url(./gallery/picnic/15.jpg);
+                                          }
+                                          
+                                          .dayFourSixteenth {
+                                            background-image: url(./gallery/picnic/16.jpg);
+                                          }
+                                          
+                                          .dayFourSeventeenth {
+                                            background-image: url(./gallery/picnic/17.jpg);
+                                          }
+                                          
+                                          .dayFourEighteenth {
+                                            background-image: url(./gallery/picnic/18.jpg);
+                                          }
+                                          
+                                          .dayFourNineteenth {
+                                            background-image: url(./gallery/picnic/19.jpg);
+                                          }
+                                          
+                                          .dayFourTwentieth {
+                                            background-image: url(./gallery/picnic/20.jpg);
+                                          }
+                                          
+                                          .dayFourTwentyFirst {
+                                            background-image: url(./gallery/picnic/21.jpg);
+                                          }
+
+                                          .dayFourTwentySecond {
+                                                background-image: url(./gallery/picnic/22.jpg);
+                                          }
+
+                                              .dayFiveFirst {
+                                                background-image: url(./gallery/presentation/1.jpg);
+                                              }
+
+                                              .dayFiveSecond {
+                                                background-image: url(./gallery/presentation/2.jpg);
+                                              }
+                                              
+                                              .dayFiveThird {
+                                                background-image: url(./gallery/presentation/3.jpg);
+                                              }
+                                              
+                                              .dayFiveFourth {
+                                                background-image: url(./gallery/presentation/4.jpg);
+                                              }
+                                              
+                                              .dayFiveFifth {
+                                                background-image: url(./gallery/presentation/5.jpg);
+                                              }
+                                              
+                                              .dayFiveSixth {
+                                                background-image: url(./gallery/presentation/6.jpg);
+                                              }
+                                              
+                                              .dayFiveSeventh {
+                                                background-image: url(./gallery/presentation/7.jpg);
+                                              }
+                                              
+                                              .dayFiveEighth {
+                                                background-image: url(./gallery/presentation/8.jpg);
+                                              }
+                                              
+                                              .dayFiveNinth {
+                                                background-image: url(./gallery/presentation/9.jpg);
+                                              }
+                                              
+                                              .dayFiveTenth {
+                                                background-image: url(./gallery/presentation/10.jpg);
+                                              }
+                                              
+                                              .dayFiveEleventh {
+                                                background-image: url(./gallery/presentation/11.jpg);
+                                              }
+                                              
+                                              .dayFiveTwelfth {
+                                                background-image: url(./gallery/presentation/12.jpg);
+                                              }
+                                              
+                                              .dayFiveThirteenth {
+                                                background-image: url(./gallery/presentation/13.jpg);
+                                              }
+                                              
+                                              .dayFiveFourteenth {
+                                                background-image: url(./gallery/presentation/14.jpg);
+                                              }
+                                              
+                                              .dayFiveFifteenth {
+                                                background-image: url(./gallery/presentation/15.jpg);
+                                              }
+                                              
+                                              .dayFiveSixteenth {
+                                                background-image: url(./gallery/presentation/16.jpg);
+                                              }
+                                              
+                                              .dayFiveSeventeenth {
+                                                background-image: url(./gallery/presentation/17.jpg);
+                                              }
+                                              
+                                              .dayFiveEighteenth {
+                                                background-image: url(./gallery/presentation/18.jpg);
+                                              }
+                                              
+                                              .dayFiveNineteenth {
+                                                background-image: url(./gallery/presentation/19.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentieth {
+                                                background-image: url(./gallery/presentation/20.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyFirst {
+                                                background-image: url(./gallery/presentation/21.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentySecond {
+                                                background-image: url(./gallery/presentation/22.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyThird {
+                                                background-image: url(./gallery/presentation/23.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyFourth {
+                                                background-image: url(./gallery/presentation/24.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyFifth {
+                                                background-image: url(./gallery/presentation/25.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentySixth {
+                                                background-image: url(./gallery/presentation/26.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentySeventh {
+                                                background-image: url(./gallery/presentation/27.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyEighth {
+                                                background-image: url(./gallery/presentation/28.jpg);
+                                              }
+                                              
+                                              .dayFiveTwentyNinth {
+                                                background-image: url(./gallery/presentation/29.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtieth {
+                                                background-image: url(./gallery/presentation/30.jpg);
+                                              }
+
+                                              .dayFiveThirtyFirst {
+                                                background-image: url(./gallery/presentation/31.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtySecond {
+                                                background-image: url(./gallery/presentation/32.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtyThird {
+                                                background-image: url(./gallery/presentation/33.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtyFourth {
+                                                background-image: url(./gallery/presentation/34.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtyFifth {
+                                                background-image: url(./gallery/presentation/35.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtySixth {
+                                                background-image: url(./gallery/presentation/36.jpg);
+                                              }
+                                              
+                                              .dayFiveThirtySeventh {
+                                                background-image: url(./gallery/presentation/37.jpg);
+                                              }
+                                    }
+                              }
+                        }
+                  }
+            }
+      }
+
+      section.sponsors{
+            font-family: var(--general-font-family);
+            background-color: #313131;
+            width: 100%;
+            display: grid;
+
+            aside.sponsorsPart{
+                  margin: 2rem 0;
+                  row-gap: 3rem;
+                  color: #fff;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+
+                  .partners{
+                        height: 100%;
+                        grid-template-rows: 1fr 1fr 1fr 1fr;
+                        display: grid;
+                        place-items: center;
+                        gap: 2rem;
+                  }
+  
+                  .sponsorsPart,
+                  .sectionSporsorsOne,
+                  aside.sectionSporsorsZuc,
+                  aside.sectionSporsors{
+                  width: 100%;
+                  color: #fff;
+                  display: grid;
+                  place-items: center;
+                  grid-template-columns: 1fr 2fr 1fr 2fr;
+
+                  a{
+                        color: #fff;
+                        text-decoration: none;
+                        width: 100%;
+                        font-size: 1.5rem;
+                  }
+
+                  div.imge{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/icon.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+                  .dac{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/APA.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+                  .gc{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/GLOB.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  } 
+                  .Colo{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/COLO.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+                  .cnf{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/CNF.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+                  .gb{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/BG.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                  }
+                  .gef{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/GEF.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+                  .undp{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/UNDP.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                  }
+                  .usid{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/USAID.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                  }
+                  .sub{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/SAB.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                  }
+
+                  .giz{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/GIZ.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+
+                  aside.sectionSporsorsZuc{
+                        width: 58%!important;
+                  }
+                  
+                  .zuc{
+                        height: 120px;
+                        width: 120px;
+                        background-image: url(./assete/zukov.png);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                  }
+            }
+
+                  .sectionSporsorsOne{
+                        width: 40%;
+                        gap: 1rem;
+                        grid-template-columns: 1fr 2fr;
+                  }
+
+            }
+      }
+
+      section.map{
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 1rem;
+
+            section.contact{
+                  height: 450px;
+                  width: 100%;
+                  background-color: #f1f1f1;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  color: #696868;
+                  
+                  div.infoText{
+                        font-size: 1.5rem;
+                        width: 90%;
+                        font-family: var(--general-font-family);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        row-gap: 4rem;
+                        justify-content:space-between ;
+                        
+                        .social{
+                              display: flex;
+                              column-gap: 1rem;
+                              flex-direction: row;
+                        }
+      
+                        span,
+                        a{
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              text-decoration: none;
+                              color: black;
+                        }
+                  }
+            }
+            
+            iframe{
+                  width: 100%;
+            }
+      }
+       
+}
+
+@media screen and (max-width: 1925px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 32rem;
+                              }
+                        }
+                  }
+            
+      }
+}
+
+@media screen and (max-width: 1750px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 30rem;
+                              }
+                        }
+                  }
+            
+      }
+}
+
+@media screen and (max-width: 1650px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 28rem;
+                              }
+                        }
+                  }
+            
+      }
+}
+
+@media screen and (max-width: 1500px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 25rem;
+                              }
+                        }
+                  }
+            
+      }
+}
+
+@media screen and (max-width: 1400px) {
+      Section.content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 23rem;
+                        }
+                  }
+            }
+            
+      }
+
+      section.gallery{
+            .mainContainer{
+                .carousel-item{
+                  padding: 0 18rem!important;
+                }
+            }
+      }
+  
+}
+
+@media screen and (max-width: 1280px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 21rem;
+                              }
+                        }
+                  }
+            
+      }
+
+      section.gallery{            
+            .mainContainer{
+                  .carousel-item{
+                        padding: 0 16rem!important;
+                  }
+            }
+      }
+  
+}
+
+@media screen and (max-width: 1180px) {
+      Section.content{
+                  article.control{
+                        aside.text{
+                              iframe{
+                                    height: 19rem;
+                              }
+                        }
+                  }
+            
+      }
+
+      section.gallery{            
+            .mainContainer{
+                  .carousel-item{
+                        padding: 0 9rem!important;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 1024px){
+      section.content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 17rem;
+                        }
+                  }
+            }
+      }
+
+      section.scroll{
+            button{
+                  bottom: 1rem!important;
+                  right: 1.4rem!important;
+            }
+      
+      }
+
+      section.carouselText{
+            .carousel{
+                  div.carousel-inner{
+                        div.carousel-item{
+                              height: 32dvh!important;
+                        }
+                  }
+            }
+      }
+      
+      section.speakers{
+
+            .popup-container {  
+                  padding: 2.5rem 0.8rem 0.8rem!important ;
+                  display: grid!important;
+                  place-items: flex-start!important;
+                  
+                  .speakerFirst,
+                  .speakerTwo,
+                  .speakerThree,
+                  .speakerFour,
+                  .speakerFive,
+                  .speakerSix,
+                  .speakerSeven,
+                  .speakerEight,
+                  .speakerNine,
+                  .speakerTen,
+                  .speakerEleven,
+                  .speakerTwelve,
+                  .speakerTherteen,
+                  .speakerFourteen,
+                  .speakerFiveteen,
+                  .speakerSixteen,
+                  .speakerSeventeen,
+                  .speakerEighteen,
+                  .speakerNineteen,
+                  .speakerTwenty,
+                  .speakerTwentyOne,
+                  .speakerTwentyTwo,
+                  .speakerTwentyThree,
+                  .speakerTwentyFour,
+                  .speakerTwentyFive,
+                  .speakerTwentySix,
+                  .speakerTwentySeven,
+                  .speakerTwentyEight,
+                  .speakerTwentyNine,
+                  .speakerThirty
+                  {
+                        margin: 0!important;
+                        margin-bottom: 1rem!important;
+                  }
+                  .popup-content{
+                        max-height: 100%!important;
+                        overflow-y: scroll!important;
+
+                        button.close {
+                              top: -0.1rem!important;
+                              right: 1rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.gallery{            
+            .mainContainer{
+                  .carousel-item{
+                        padding: 0 7rem!important;
+                  }
+
+                  .closeSlider,
+                  .carousel-control-prev,
+                  .carousel-control-next
+                  {
+                        height: 3rem!important;
+                        width: 3rem!important;
+                        font-size: 1rem!important;
+                  }
+            }
+      }
+
+}
+
+@media screen and (max-width: 992px) {
+
+      .form{
+            gap: 0rem!important;
+            padding: 0!important;
+            height: 90%!important;
+            width: 90%;
+      }
+
+     .content{
+            row-gap: 2rem!important;
+      
+            article.control{
+                  width: 100%!important;
+                  flex-direction: column!important;
+                  aside.text{
+                        a{
+                              width: 34%!important;
+                        }
+                        iframe{
+                              height: 32rem!important;
+                              width: 100%;
+                        }
+                  }
+            }
+      }
+
+      section.carouselText{
+            grid-template-rows: 1fr 0fr!important;
+            .carousel{
+                  div.carousel-inner{
+                        div.carousel-item{
+                              height: 47dvh!important;
+                        }
+                  }
+            }
+      }
+
+      section.speakers{
+            margin-bottom: 1rem!important;
+            height: 103%!important;
+            gap: 0rem!important;
+
+            article.my-container{
+                  grid-template-columns: 1fr 1fr!important;
+                  width: 90%!important;
+
+                  ul{
+                        li{
+                              p{
+                                    font-weight: 400!important;
+                              }
+                        }
+                  }
+
+                  div.speakerFirst{      
+                        height: 460!important;
+                  }
+                  div.speakerTwo{      
+                        height: 460!important;
+                  } 
+                  div.speakerThree{      
+                        height: 460!important;
+                  }
+
+                  div.speakerFour{      
+                        height: 460!important;
+                  }
+
+                  div.speakerFive{      
+                        height: 460!important;
+                  }
+
+                  div.speakerSix{      
+                        height: 460!important;
+                  }
+
+                  div.speakerSeven{      
+                        height: 460!important;
+                  }
+
+                  div.speakerEight{      
+                        height: 460!important;
+                  }
+
+                  div.speakerNine{      
+                        height: 460!important;
+                  }
+
+                  div.speakerTen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerEleven{      
+                        height: 460!important;
+                  }
+
+                  div.speakerTwelve{      
+                        height: 460!important;
+                  }
+
+                  div.speakerTherteen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerFourteen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerFiveteen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerSixteen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerSeventeen{      
+                        height: 460!important;
+                  }
+
+                  div.speakerEighteen{
+                        height: 460!important;
+                  }
+
+                  div.speakerNineteen{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwenty{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyOne{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyTwo{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyThree{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyFour{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyFive{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentySix{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentySeven{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyEight{
+                        height: 460!important;
+                  }
+
+                  div.speakerTwentyNine{
+                        height: 460!important;
+                  }
+
+                  div.speakerThirty{
+                        height: 460!important;
+                  }
+            }
+      } 
+
+      section.gallery{
+            height: 100%!important;
+            
+            .mainContainer{
+                  grid-template-columns: 1fr 1fr!important;
+                  width: 90%!important;
+
+                  .dayOne,
+                  .dayTwo,
+                  .dayThree,
+                  .dayFour,
+                  .dayFive{
+                        height: 0%!important;
+                  }
+
+                  .carousel-item{
+                        padding: 0 9rem!important;
+                  }
+
+                  .popup-container{
+                        padding: 6rem 0rem!important;
+
+                        .imageCarousel{
+                              margin: 0 -6rem!important;
+                        }
+                  }
+
+                  .dayOneImage,
+                  .dayTwoImage,
+                  .dayThreeImage,
+                  .dayFourImage,
+                  .dayFiveImage{
+                        height: 298px!important;
+                  }
+            }
+      }
+  
+      section.sponsors{
+            aside.sponsorsPart{
+                  margin: 2rem 0 0 0!important;
+                  row-gap: 2rem!important;
+                  h1{
+                        font-size: 1.5rem!important;
+                  }
+
+                  a{
+                        font-size: 1.2rem!important;
+                  }
+
+                  .partners{
+                        height: 50%!important;
+                  }
+
+                  .sectionSporsorsOne,
+                  aside.sectionSporsorsZuc,
+                  aside.sectionSporsors{
+                        column-gap: 1rem!important;
+                        row-gap: 1rem!important;
+                        width: 73%!important;
+                        grid-template-columns: 1fr 2fr!important;
+                  }
+            }           
+      }
+
+}
+
+@media screen and (max-width: 800px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 27rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.gallery{            
+            .mainContainer{
+                  .popup-container{
+                        .imageCarousel{
+                              height: 400px!important;
+                              width: auto!important;
+                        }
+                  }
+
+                  .dayOneImage,
+                  .dayTwoImage,
+                  .dayThreeImage,
+                  .dayFourImage,
+                  .dayFiveImage{
+                        height: 298px!important;
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 750px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 24rem!important;
+                        }
+                  }
+            }
+      }
+
+}
+
+@media screen and (max-width: 700px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 24rem!important;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 650px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 22rem!important;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 610px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 21rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.carouselText{
+            .carousel{
+                  div.carousel-inner{
+                        div.carousel-item{
+                              height: 69dvh!important;
+                        }
+                  }
+            }
+      }
+
+      section.speakers{    
+            width: 90%!important;
+
+            article.my-container{
+                  grid-template-columns: 1fr!important;
+            }
+      }
+
+      section.gallery{
+            height: 325dvh!important;
+
+            .mainContainer{
+                  grid-template-columns: 1fr!important;
+
+                  .closeSlider,
+                              .carousel-control-prev,
+                              .carousel-control-next
+                              {
+                                    height: 2rem!important;
+                                    width: 2rem!important;
+                                    font-size: 1rem!important;
+                              }
+
+                              .carousel-control-next,
+                              .closeSlider{
+                                    right: 1rem!important;
+                              }
+
+                              .carousel-control-prev{
+                                    left: 1rem!important;
+                              }
+
+                  .carousel-item{
+                        padding: 0 6rem!important;
+                  }
+
+                  .popup-container{
+                        padding: 10rem 1rem !important;
+                    }
+            }
+      }
+
+      section.sponsors{
+            .partners{
+                  width: 90%!important;
+            }
+      }
+
+      section.map{
+            flex-direction: column-reverse!important;
+
+            section.contact{
+                  height: 175px!important;
+
+                  .infoText{
+                        row-gap: 1rem!important;
+
+                        span,
+                        a{
+                              font-size: 1rem!important;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 580px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 19rem!important;
+                        }
+                  }
+            }
+      }
+}
+
+@media screen and (max-width: 500px){
+
+      section.content{
+            height: 112%!important;
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 17rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.speakers{
+            height: 102%!important;
+
+            .popup-container {
+                  padding: 0.5rem!important;  
+                  display: grid!important;
+      
+                  .speakerFirst,
+                  .speakerTwo,
+                  .speakerThree,
+                  .speakerFour,
+                  .speakerFive,
+                  .speakerSix,
+                  .speakerSeven,
+                  .speakerEight,
+                  .speakerNine,
+                  .speakerTen,
+                  .speakerEleven,
+                  .speakerTwelve,
+                  .speakerTherteen,
+                  .speakerFourteen,
+                  .speakerFivteen,
+                  .speakerSixteen,
+                  .speakerFirstSeventeen{
+                        justify-self: center!important;
+                        margin-bottom: 0.5rem!important;
+                  }
+
+                  .popup-content{
+                        padding: 0.5rem 0.5rem!important ;
+                        max-height: 100%!important;
+                        overflow-y: auto!important;
+
+                        button.close {
+                              top: -0.1rem!important;
+                              right: 1rem!important;
+                        }
+                  }
+            }
+      }
+
+}
+
+@media screen and (max-width: 440px) {
+      section.content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 14rem!important;
+                        }
+                  }
+            }
+      }
+      
+      section.map{
+            justify-content: center!important;
+            align-items: center!important;
+
+            section.contact{
+                  div.infoText{
+                        width: 50%!important;
+                  }
+            }
+      }   
+}
+
+@media screen and (max-width: 422px) {
+
+      section.content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 14rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.sponsors{
+            aside.sponsorsPart{
+                  h1{
+                        font-size: 1rem!important;
+                  }
+                  a{
+                        font-size: 0.8rem!important;
+                  }
+
+                  .sectionSporsorsOne,
+                  aside.sectionSporsorsZuc,
+                  aside.sectionSporsors{
+                        width: 80%!important;
+
+                        div.imge,
+                        .dac,
+                        .gc,
+                        .Colo,
+                        .cnf,
+                        .gb,
+                        .gef,
+                        .undp,
+                        .usid,
+                        .sub,
+                        .giz,
+                        .zuc{
+                              height: 100px!important;
+                              width: 100px!important;
+                        }
+                  }
+            }           
+      }    
+     
+}
+
+@media screen and (max-width: 401px) {
+      section.content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 13rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.carouselText{
+            height: 100dvh;
+      }
+
+      section.speakers{
+            height: 101.5%!important;
+      }
+
+      .popup-container{
+            left: 0px!important;
+
+            .popup-content{
+
+                  button.close {
+                        top: -0.2rem!important;
+                        right: -0.2rem!important;
+
+                        i{
+                              font-weight: 100!important;
+                        }
+                  }
+            }
+      }
+     
+}
+
+@media screen and (max-width: 380px) {
+         .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 12rem!important;
+                        }
+                  }
+            }
+      }
+
+      section.carouselText{
+            .carousel{
+                  div.carousel-inner{
+                              //აქ გაუწერე ტექსტს სიმაღლე
+                              div.carousel-item{
+                              padding: 0.5rem!important;
+                              row-gap: 1rem!important;
+                              h3{
+                                    font-size: 1rem!important;
+                              }
+                              p{
+                                    font-size: 0.8rem!important;
+                              }
+                              div.carousel-item{
+                                    height: 48dvh!important;
+                              }
+                        }
+                  }
+            }  
+      }  
+     
+}
+
+@media screen and (max-width: 340px) {
+
+      .content{
+            article.control{
+                  aside.text{
+                        iframe{
+                              height: 10rem!important;
+                        }
+                  }
+            }
+      }
+
+      main{
+            display: grid;
+      }
+      
+}
+
+@media screen and (min-width: 1500px) {
+      Section.content{
+            height: 114%!important;
+      }
+
+      section.carouselText{
+            height: 100vh!important;
+
+            .carousel{
+                  div.carousel-inner{
+                        div.carousel-item{
+                              height: 32dvh!important;
+                        }
+                  }
+            }
+      }
+
+      section.speakers{
+            height: 102%!important;
+      }
+
+      section.gallery{
+            .mainContainer{
+                  .imageCarousel{
+                        height: 700px!important;
+                        width: 1020px!important;
+                  }
+
+                  .carousel-item{
+                        padding: 7rem 25rem!important;
+                  }     
+            }
+      }
+
+      aside.sponsorsPart{
+            .partners{
+                  width: 90%!important;
+            }
+            .sponsorsPart,
+            aside.sectionSporsorsZuc,
+            aside.sectionSporsors{
+                  grid-template-columns: 1fr 2fr 1fr 2fr!important;
+                  width: 68%!important;
+                  gap: 1rem!important;
+            } 
+      }    
+      
+}

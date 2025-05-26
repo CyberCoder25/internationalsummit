@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "internationalsummit-df7b9": {
+      "hosting": {
+        "Internationalsummit": [
+          "internationalsummit-df7b9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "internationalsummit-df7b9"
+  }
+}

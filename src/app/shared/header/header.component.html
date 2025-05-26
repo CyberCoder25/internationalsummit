@@ -1,0 +1,125 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" id="fluid">
+    <a href="#">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRds_Rgh2-rN80YQgf1mL1IDf4Abzjnwhz0EQ&usqp=CAU"
+        alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleBurgerMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      (clickOutside)="closeBurgerMenu()"
+    >
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="#aboutSummit"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "aboutSummit" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="#session"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "session" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="#speakers"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "speakers" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="#gallery"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "gallery" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="#sponsores"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "sponsores" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            (click)="onLinkClick()"
+            href="https://www.borjomisummit.ge/Presentation/"
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >{{ "presentation" | translate }}
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search" id="icons">
+        <table class="nav-item">
+          <tbody>
+            <th>
+              <a
+                (click)="onLinkClick()"
+                href="https://apa.gov.ge/ge/"
+                target="_blank"
+                ><i class="fa-solid fa-earth-americas"></i
+              ></a>
+            </th>
+            <th>
+              <a
+                style="font-weight: bold; font-size: 1.2rem"
+                *ngIf="visible"
+                (click)="loadLanguage('ka')"
+                >GE
+              </a>
+              <a
+                style="font-weight: bold; font-size: 1.2rem"
+                *ngIf="notVisible"
+                (click)="loadLanguage('en')"
+                >EN
+              </a>
+            </th>
+          </tbody>
+        </table>
+        <!-- <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit"></button> -->
+      </form>
+    </div>
+  </div>
+</nav>
