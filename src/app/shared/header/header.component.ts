@@ -8,7 +8,6 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  //translate
   visible: boolean = true;
   notVisible: boolean = false;
 
@@ -43,7 +42,7 @@ export class HeaderComponent {
     this.closeBurgerMenu();
   }
 
-  // Function to close the burger menu
+
   closeBurgerMenu() {
     const menu = document.getElementById('navbarSupportedContent');
     if (menu && window.bootstrap) {
