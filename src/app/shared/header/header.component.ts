@@ -8,7 +8,7 @@ import * as bootstrap from 'bootstrap';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  // translate vs visible language click.
+  //translate
   visible: boolean = true;
   notVisible: boolean = false;
 
@@ -27,7 +27,7 @@ export class HeaderComponent {
   toggleBurgerMenu() {
     const menu = document.getElementById('navbarSupportedContent');
     if (menu && window.bootstrap) {
-      if (!this.burgerMenuOpen) { // Check if the burger menu is not open
+      if (!this.burgerMenuOpen) {
         const bsCollapse = new window.bootstrap.Collapse(menu);
         bsCollapse.show();
         this.burgerMenuOpen = true;
@@ -47,7 +47,7 @@ export class HeaderComponent {
   closeBurgerMenu() {
     const menu = document.getElementById('navbarSupportedContent');
     if (menu && window.bootstrap) {
-      if (this.burgerMenuOpen) { // Check if the burger menu is open
+      if (this.burgerMenuOpen) {
         const bsCollapse = new window.bootstrap.Collapse(menu);
         bsCollapse.hide();
         this.burgerMenuOpen = false;
